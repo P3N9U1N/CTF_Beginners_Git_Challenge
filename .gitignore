@@ -42,3 +42,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .jenkins-external
+
+#Ignore unzipped challenges directory
+repo/

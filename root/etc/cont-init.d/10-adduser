@@ -35,3 +35,6 @@ User gid:    $(id -g "$USER_NAME")
 chown "$USER_NAME":"$USER_NAME" /app
 chown "$USER_NAME":"$USER_NAME" /config
 chown "$USER_NAME":"$USER_NAME" /defaults
+
+#Set login shell of user to git-shell
+sed -i "s|\(^$USER_NAME:.*:\)\(.*$\)|\1`which git-shell`|" /etc/passwd

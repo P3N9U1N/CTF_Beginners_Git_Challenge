@@ -31,3 +31,8 @@ RUN \
 
 # add local files
 COPY /root /
+
+#Git config
+RUN apk add --no-cache git 
+RUN echo `which git-shell` >> /etc/shells
+ADD challenges.tar.gz /repo
