@@ -6,6 +6,8 @@ containerized with Docker for easy deployment.
 Clone the repository, get the flag.  
 * Challenge 2  
 The flag has been changed in flag.txt. Look at the log to get it.  
+* Challenge 3:  
+There is a bug in a source file. Remove the bug and push the changes to origin.
 * Further Challenges  
 Todo.  
 
