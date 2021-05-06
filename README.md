@@ -10,8 +10,8 @@ The flag has been changed in flag.txt. Look at the log to get it.
 There is a bug in a source file. Remove the bug and push the changes to origin.
 * Challenge 4:  
 The flag is in working progress. A feature and a bug branch has been added and needs to be merged.
-* Further Challenges  
-Todo.  
+* Challenge 5:  
+The flag has been deleted from the file "flag.txt" and needs to be found. 
 
 ## How to test:
 ```
@@ -25,6 +25,10 @@ docker run -d --name=beginners-git-challenge \
 -v ~/.beginners-git-challenge-config:/config \
 --rm beginners-git-challenge
 git clone ssh://tux@localhost:2222/repo/challenge1 
+git clone ssh://tux@localhost:2222/repo/challenge2
+git clone ssh://tux@localhost:2222/repo/challenge3
+git clone ssh://tux@localhost:2222/repo/challenge4
+git clone ssh://tux@localhost:2222/repo/challenge5
 ```
 
 ## How to add further challenges:
