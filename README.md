@@ -11,7 +11,12 @@ There is a bug in a source file. Remove the bug and push the changes to origin.
 * Challenge 4:  
 The flag is in working progress. A feature and a bug branch has been added and needs to be merged.
 * Challenge 5:  
+Someone implemented a bug, find out who. 
+* Challenge 6:  
 The flag has been deleted from the file "flag.txt" and needs to be found. 
+* Challenge 7:  
+Another flag is in working progress. A change from a branch needs to be cherry-picked.
+
 
 ## How to test:
 ```
@@ -29,6 +34,8 @@ git clone ssh://tux@localhost:2222/repo/challenge2
 git clone ssh://tux@localhost:2222/repo/challenge3
 git clone ssh://tux@localhost:2222/repo/challenge4
 git clone ssh://tux@localhost:2222/repo/challenge5
+git clone ssh://tux@localhost:2222/repo/challenge6
+git clone ssh://tux@localhost:2222/repo/challenge7
 ```
 
 ## How to add further challenges:
