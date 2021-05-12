@@ -25,7 +25,8 @@ docker run -d --name=beginners-git-challenge \
 --hostname=beginners-git-challenge-server \
 -e PASSWORD_ACCESS=true \
 -e USER_PASSWORD=password  \
--e USER_NAME=tux -p 2222:2222 \
+-e USER_NAME=tux \
+-p 2222:2222 \
 -e SUDO_ACCESS=false \
 -v ~/.beginners-git-challenge-config:/config \
 --rm beginners-git-challenge
@@ -48,5 +49,22 @@ of the pushed data and display the flag.
 docker exec -it beginners-git-challenge bash  
 
 ## Sample Docker compose file:  
-Todo  
+```
+version: "2.1"
+services:
+  beginners-git-challenge:
+    image: beginners-git-challenge
+    container_name: beginners-git-challenge
+    hostname: beginners-git-challenge-server
+    environment:
+      - SUDO_ACCESS=false 
+      - PASSWORD_ACCESS=true
+      - USER_PASSWORD=password 
+      - USER_NAME=tux
+    volumes:
+      - ~/.beginners-git-challenge-config:/config
+    ports:
+      - 9000:2222 #map port 9000 to container ssh port 2222 
+    restart: unless-stopped
+```
 
