@@ -67,4 +67,47 @@ services:
       - 9000:2222 #map port 9000 to container ssh port 2222 
     restart: unless-stopped
 ```
+## Solutions
+
+<details>
+<summary>Challenge 1</summary>
+cat flag.txt  
+</details>
+<details>
+<summary>Challenge 2</summary>
+git log -p  
+</details>
+<details>
+<summary>Challenge 3</summary>
+Remove the line with the BUG using a text editor of your choice.<br>  
+commit -am "Fix bug"<br>  
+git push
+</details>
+<details>
+<summary>Challenge 4</summary>
+git log --all --graph -p<br>  
+The 2 changes that are shown with the above command must be combined for retrieving the proper flag.<br>  
+This is achieved by merging both branches into main:<br>  
+git merge origin/bug-flag-typo<br>  
+git merge origin/feature-flag-entropy<br>
+</details>
+<details>
+<summary>Challenge 5</summary>
+Find out commit id where bug was implemented:<br>  
+git blame flag.txt<br>  
+Show commit details:<br>  
+git log c50d4edd --max-count 1
+</details>
+<details>
+<summary>Challenge 6</summary>
+git log -p -S flag<br>
+</details>
+<details>
+<summary>Challenge 7</summary>
+Look at the log:<br>  
+git log --all --graph<br>  
+Change 3  with commit id d8b45514f5af9528c3ea75e1fb9134917920a0b9 needs to be cherry picked:<br>  
+git cherry-pick d8b45514f5af9528c3ea75e1fb9134917920a0b9<br>  
+cat flag.txt<br>  
+</details>
 
